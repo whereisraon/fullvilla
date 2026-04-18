@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FDFCFB;
-  --foreground: #1B2E28;
+  --background: #F4F4F4;
+  --foreground: #1E3932;
   --accent: #D4AF37;
-  --glass: rgba(255, 255, 255, 0.7);
+  --glass: rgba(255, 255, 255, 0.85);
+  --primary: #1E3932;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-primary: var(--primary);
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-manrope);
 }
@@ -23,16 +25,24 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-playfair), serif;
+  letter-spacing: 0.1em;
 }
 
 .glass {
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, var(--foreground), #2E4D44);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.arch-top {
+  border-radius: 50% 50% 0 0 / 15% 15% 0 0;
+}
+
+.arch-full {
+  border-radius: 500px 500px 0 0;
+}
+
+.text-editorial {
+  line-height: 1.6;
+  letter-spacing: 0.05em;
 }
